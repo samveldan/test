@@ -1,0 +1,129 @@
+.logo {
+    @media screen and (max-width: 1040px) {
+        margin-right: auto;;
+    }
+}
+
+.header {
+    &__content {
+        margin: 13px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__menu {
+        margin-left: 130px;
+        @media screen and (max-width: 1040px) {
+            order: 3;
+            margin: 0;
+            background-color: #F2F2F2;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 50%;
+            z-index: 10;
+            transform: translateX(-100%);
+            transition: 1s all;
+        }
+        &.active {
+            transform: translateX(0);
+            overflow-y: auto;
+        }
+        li {
+            margin-right: 33px;
+            @media screen and (max-width: 1040px) {
+                margin: 0;
+                margin-top: 50px;
+                width: 100%;
+                border: 1px solid black;
+                border-left: 0;
+                border-right: 0;
+                text-align: center;
+                a {
+                    display: block;
+                    padding: 20px 0;
+                }
+            }
+            &:last-child {
+                margin-right: 0px;
+                @media screen and (max-width: 640px) {
+                    border: 0;
+                }
+            }
+        }
+        &-item {
+            font-weight: 400;
+            font-size: 16px;
+            color: #58595B;
+            transition: .3s all;
+            &:hover {
+                color: #E04E39;
+            }
+        }
+    }
+    &__btns {
+        margin-top: -5px;
+        display: flex;
+        align-items: center;
+        @media screen and (max-width: 1040px) {
+            margin-right: 80px;
+        }
+        @media screen and (max-width: 640px) {
+            display: none;
+        }
+        &_red-btn {
+            margin-right: 20px;
+        }
+    }
+    &__adaptive-btns {
+        @media screen and (min-width: 639px) {
+            display: none;
+        }
+        @media screen and (max-width: 639px) {
+            display: block;
+            button {
+                width: 100%;
+                margin: 0;
+                justify-content: center;
+                &:last-child {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+.burger {
+    width: 40px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+    @media screen and (max-width: 1040px) {
+        display: flex;
+    }
+    span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #E04E39;
+        transition: .5s all;
+    }
+    &.active {
+        justify-content: center;
+        span {
+            transform: rotate(45deg);
+            &:nth-child(2) {
+                display: none;
+            }
+            &:last-child {
+                transform: rotate(-45deg);
+                margin-top: -1px;
+            }
+        }
+    }
+}

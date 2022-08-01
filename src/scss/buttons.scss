@@ -1,0 +1,29 @@
+.red-btn {
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    background: #E04E39;
+    border-radius: 5px;
+    padding: 11px 45px;
+    display: flex;
+    align-items: center;
+    &:hover {
+        background: rgba(#E04E39, .8);
+    }
+    &__symbol {
+        font-size: 23px;
+        margin-right: 10px;
+    }
+}
+
+.stand-btn {
+    padding: 17px 32px;
+    border: 1px solid #58595B;
+    border-radius: 5px;
+    color: #58595B;
+    font-weight: 500;
+    font-size: 14px;
+    &:hover {
+        opacity: .8;
+    }
+}
